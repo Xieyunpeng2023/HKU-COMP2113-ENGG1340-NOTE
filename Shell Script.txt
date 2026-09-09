@@ -1,0 +1,132 @@
+#Shell Script
+
+B27 BEng (DS&E) Evan
+本note可能存在错误，具体请以课件为准
+
+在ssh中使用vi编辑器编辑脚本代码
+$ vi hello.sh
+
+
+shell script使用 #!
+本门课程使用bash shell
+
+#! /bin/bash
+
+
+which -a命令
+
+寻找bash shell 的正确路径
+
+which -a bash
+
+
+echo命令
+
+输出命令，类似于print
+
+echo [-n] "abc"
+
+-n :  本行输出后不换行，第二行输出会紧随其后，不会换行
+
+
+运行一个C++程序的脚本代码：
+
+g++ filename.cpp -o filename
+
+
+shell script 只有一种变量：string 
+
+调用变量的代码：$variable-name
+
+
+read命令
+
+读取一个输入，储存在变量中
+
+read variable-name
+
+
+无引号，单引号与双引号的区别
+
+无引号只能用于单个单词：a=cat
+
+单引号不支持变量替换与引用
+
+$ :  变量替换与引用
+\ :  取消特殊符号的含义
+`` : 反引号，将bash命令括起来
+
+name="Apple" 
+echo 'Hello, $name' 
+echo "Hello, $name" 
+echo "\$name = $name"
+
+$ ./ex2_3.sh 
+Hello, $name 
+Hello, Apple 
+$name = Apple 
+
+a="`cat file.txt`" 
+
+
+字符串长度命令
+
+${#变量名}
+
+
+Substring(字符串中切片)
+
+${变量名:开始索引:长度}
+
+字符串部分替换
+
+ ${a/原字符串切片/新字符串切片}
+
+let命令
+
+使得字符串可以进行数学运算
+
+let "function"  
+
+if 语句
+
+if [ condition ]
+then
+	perform action
+fi
+
+
+if [ condition1 ] 
+then 
+	echo "condition 1 met" 
+elif [ condition2 ] 
+then 
+	echo "condition 2 met" 
+else 
+	echo "No condition met" 
+fi
+
+
+for循环
+
+list="1 2 3 4 5" 
+for i in $list 
+do 
+	echo "This is iteration $i" 
+done 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

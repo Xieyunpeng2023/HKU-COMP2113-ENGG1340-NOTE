@@ -1,0 +1,31 @@
+C++ basic
+
+B27 BEng (DS&E) Evan
+本note可能存在错误，具体请以课件为准
+
+标准格式：
+g++ -pedantic-errors -std=c++11 your_program.cpp
+
+Hello World: 
+
+// 这是一行注释
+
+//这是包含指令，它告知编译器到何处查找程序所使用的特定例程的相关信息
+#include <iostream> 
+
+//iostream 中的对象 / 操作 cout 和 endl 都在 std 命名空间下。如果去掉这一行（using namespace std; 这种引入命名空间的语句 ），那么你就需要写成 std::cout 和 std::endl ，这样才不会引发编译错误。
+using namespace std; 
+
+//主程序
+int main() {
+ cout << “Hello World!” << endl;
+ return 0;
+}
+
+cout命令
+
+用于输出
+
+cout << "abc" << endl;
+ 
+
